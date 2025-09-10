@@ -14,7 +14,6 @@ public class ChatAPI {
 
     @GetMapping("/ai/chat")
     public String chat(@RequestParam(value = "message") String message) {
-
         return chatClient.prompt().user(message).call().content();
     }
 }
